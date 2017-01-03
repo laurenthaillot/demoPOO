@@ -43,12 +43,22 @@ public class AdresseTest {
 		Adresse adresse1 = new Adresse(1, "rue des lilas", 92100, "Courbevoie");
 		Adresse adresse2 = null;
 		
-		boolean comparaison =adresse1.equals(adresse2);
+		boolean comparaison = adresse1.equals(adresse2);
 		
 		assertFalse(comparaison);
 	}
 	
-
+	@Test
+	public void adresses_distinctes_en_memoires_hascode_identiques(){
+		Adresse adresse1 = new Adresse(1, "rue des lilas", 92100, "Courbevoie");
+		Adresse adresse2 = new Adresse(1, "rue des lilas", 00000, "Courbevoie");
+		
+		int hashcodeAdresse1 = adresse1.hashCode();
+		int hashcodeAdresse2 = adresse2.hashCode();
+		
+		assertEquals(hashcodeAdresse1, hashcodeAdresse2);
+		
+	}
 
 }
 

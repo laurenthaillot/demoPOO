@@ -9,7 +9,7 @@ public class Adresse {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + codePostal;
+	
 		result = prime * result + ((nomVoie == null) ? 0 : nomVoie.hashCode());
 		result = prime * result + numeroVoie;
 		result = prime * result + ((ville == null) ? 0 : ville.hashCode());
